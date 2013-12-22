@@ -1,13 +1,13 @@
 public class AssertionTest {
 	static {
 		boolean assertsEnabled = false;
-		assert assertsEnabled = true; // Intentional side effect!!!
+		assert assertsEnabled = false; // Intentional side effect!!!
 		if (!assertsEnabled)
 			throw new RuntimeException("Asserts must be enabled!!!");
 	}
 	public static void main(String[] args) throws IllegalAccessException, InstantiationException {		
 		int score=0;
-		int[] testInts={-5,-1,0,1,101,1010101,776535677};
+		int[] testInts={-5,-1,0,1,101,1010101,776535677, -7655};
 		for (int testInt:testInts) {
 			try {
 				int mrBResult=mrBLib.Change.decimalToBinary(testInt);
